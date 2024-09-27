@@ -33,7 +33,7 @@ const handleSubmit = () => {
         <h2>Found it !!!</h2>
         <p>{{ result.firstname }} {{ result.lastname }}</p>
         <p>{{ result.age }} ans</p>
-        <p>{{ rejob }}</p>
+        <p>{{ result.job }}</p>
       </div>
     </div>
   </main>
