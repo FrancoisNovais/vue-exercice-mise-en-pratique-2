@@ -7,7 +7,10 @@ const result = ref(null)
 
 const handleSubmit = () => {
   const personSearch = personsList.find((person) => {
-    return person.firstname === firstname.value
+    return (
+      person.firstname.toLowerCase() === firstname.value.toLowerCase() ||
+      person.lastname.toLowerCase() === firstname.value.toLowerCase()
+    )
   })
 
   result.value = personSearch
