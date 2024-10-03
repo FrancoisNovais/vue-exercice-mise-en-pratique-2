@@ -16,6 +16,21 @@ const userInfos = ref({
   job: 'environmental scientist'
 })
 
-app.provide('GlobalStore', { userInfos: userInfos })
+const editProfile = (infos) => {
+  if (infos.firstname) {
+    userInfos.value.firstname = infos.firstname
+  }
+  if (infos.lastname) {
+    userInfos.value.lastname = infos.lastname
+  }
+  if (infos.age) {
+    userInfos.value.age = infos.age
+  }
+  if (infos.job) {
+    userInfos.value.job = infos.job
+  }
+}
+
+app.provide('GlobalStore', { userInfos: userInfos, editProfile: editProfile })
 
 app.mount('#app')
