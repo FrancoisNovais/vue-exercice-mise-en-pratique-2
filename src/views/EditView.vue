@@ -7,12 +7,12 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const firstname = ref('')
-const lastname = ref('')
-const age = ref()
-const job = ref('')
-
 const Store = inject('GlobalStore')
+
+const firstname = ref(Store.userInfos.value.firstname)
+const lastname = ref(Store.userInfos.value.lastname)
+const age = ref(Store.userInfos.value.age)
+const job = ref(Store.userInfos.value.job)
 
 const handleSubmit = () => {
   const newInfos = {
