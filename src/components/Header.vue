@@ -13,8 +13,17 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 header {
-  padding: 10px;
+  height: 60px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  border-bottom: 2px solid #f99600;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
 }
 </style>
