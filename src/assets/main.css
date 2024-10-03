@@ -1,1 +1,18 @@
 @import './base.css';
+
+:root {
+  --header-height: 60px;
+}
+main {
+  height: calc(100vh - var(--header-height));
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

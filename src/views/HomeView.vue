@@ -56,7 +56,6 @@ const handleSubmit = () => {
 
 <style scoped>
 .container {
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -64,5 +63,18 @@ const handleSubmit = () => {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.right-column > div {
+  border: 1px solid black;
+  padding: 5px;
 }
 </style>
