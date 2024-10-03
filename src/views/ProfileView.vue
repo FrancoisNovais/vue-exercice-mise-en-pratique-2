@@ -12,10 +12,10 @@ const Store = inject('GlobalStore')
       <h1>Your profile</h1>
 
       <div>
-        <p>Firstname : {{ Store.userInfos.value.firstname }}</p>
-        <p>Lastname : {{ Store.userInfos.value.lastname }}</p>
-        <p>Age : {{ Store.userInfos.value.age }}</p>
-        <p>Job : {{ Store.userInfos.value.job }}</p>
+        <p><span>Firstname :</span> {{ Store.userInfos.value.firstname }}</p>
+        <p><span>Lastname :</span> {{ Store.userInfos.value.lastname }}</p>
+        <p><span>Age :</span> {{ Store.userInfos.value.age }}</p>
+        <p><span>Job :</span> {{ Store.userInfos.value.job }}</p>
       </div>
 
       <RouterLink :to="{ name: 'edit' }"> <p>Edit profile</p> </RouterLink>
@@ -26,6 +26,11 @@ const Store = inject('GlobalStore')
 <style scoped>
 .container {
   margin-top: 20px;
+}
+span {
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 20px;
 }
 a {
   text-decoration: none;
